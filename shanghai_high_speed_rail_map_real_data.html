@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8bdfcfab9a500f1a56867092dd2e760d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8bdfcfab9a500f1a56867092dd2e760d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8bdfcfab9a500f1a56867092dd2e760d = L.map(
+                "map_8bdfcfab9a500f1a56867092dd2e760d",
+                {
+                    center: [31.2304, 121.4737],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8bf1d9c242c40e9548942fe40d6e3a75 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_8bf1d9c242c40e9548942fe40d6e3a75.addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var poly_line_5a461cefafcbdfd90c171b4b1ff87d43 = L.polyline(
+                [[31.2304, 121.4737], [39.9042, 116.4074]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_57b3acb2838366650d141fd8b50c8b11 = L.marker(
+                [39.9042, 116.4074],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ea180d8643e379578d79dd17c49e2216 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eBeiJing\u003c/div\u003e"});
+            marker_57b3acb2838366650d141fd8b50c8b11.setIcon(div_icon_ea180d8643e379578d79dd17c49e2216);
+        
+    
+        var popup_4c731c6ef5150e365ec1e66f47e6d3ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f57727221645646f47deb10e60065183 = $(`<div id="html_f57727221645646f47deb10e60065183" style="width: 100.0%; height: 100.0%;">Destination: BeiJing<br> Travel Time: 4h 30m<br> Trains per Day: 30<br> Cost: $48$<br> Time by Car: 12h 13min</div>`)[0];
+                popup_4c731c6ef5150e365ec1e66f47e6d3ac.setContent(html_f57727221645646f47deb10e60065183);
+            
+        
+
+        marker_57b3acb2838366650d141fd8b50c8b11.bindPopup(popup_4c731c6ef5150e365ec1e66f47e6d3ac)
+        ;
+
+        
+    
+    
+            marker_57b3acb2838366650d141fd8b50c8b11.bindTooltip(
+                `<div>
+                     BeiJing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a53a6d0f6dc43add18e55e26fa13be4 = L.marker(
+                [35.5673, 118.94055],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_7627640182101148470a91f671a9d198 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e662.3 miles\u003c/div\u003e"});
+            marker_5a53a6d0f6dc43add18e55e26fa13be4.setIcon(div_icon_7627640182101148470a91f671a9d198);
+        
+    
+            var poly_line_afa44c2bb7573d8ed0883f5cfc2ff870 = L.polyline(
+                [[31.2304, 121.4737], [34.3416, 108.9398]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_4b81ac634be230de9a54e5e9f5bfa1e2 = L.marker(
+                [34.3416, 108.9398],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_3c9cc52d3fdd71aea66a4eb8c4cdcd22 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eXi\u0027an\u003c/div\u003e"});
+            marker_4b81ac634be230de9a54e5e9f5bfa1e2.setIcon(div_icon_3c9cc52d3fdd71aea66a4eb8c4cdcd22);
+        
+    
+        var popup_4182993d0688559f19691f5f9aaa4c63 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24cdee58f316e9c8a1eb866a88f2a8c6 = $(`<div id="html_24cdee58f316e9c8a1eb866a88f2a8c6" style="width: 100.0%; height: 100.0%;">Destination: Xi'an<br> Travel Time: 6h 30m<br> Trains per Day: 5<br> Cost: $107$<br> Time by Car: 14h 19min</div>`)[0];
+                popup_4182993d0688559f19691f5f9aaa4c63.setContent(html_24cdee58f316e9c8a1eb866a88f2a8c6);
+            
+        
+
+        marker_4b81ac634be230de9a54e5e9f5bfa1e2.bindPopup(popup_4182993d0688559f19691f5f9aaa4c63)
+        ;
+
+        
+    
+    
+            marker_4b81ac634be230de9a54e5e9f5bfa1e2.bindTooltip(
+                `<div>
+                     Xi'an
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7a587570006cb9028b4cea2ede69aac1 = L.marker(
+                [32.786, 115.20675],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ec4eb430b77dcbbdef9835ea2b6fd200 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e759.8 miles\u003c/div\u003e"});
+            marker_7a587570006cb9028b4cea2ede69aac1.setIcon(div_icon_ec4eb430b77dcbbdef9835ea2b6fd200);
+        
+    
+            var poly_line_e3f618aac18e24637566f3cb133e792c = L.polyline(
+                [[31.2304, 121.4737], [23.1291, 113.2644]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_9924b88058e15d7234868f4740880a89 = L.marker(
+                [23.1291, 113.2644],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_149bb6740ec7e9751eeb84bc064b2afc = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eGuangZhou\u003c/div\u003e"});
+            marker_9924b88058e15d7234868f4740880a89.setIcon(div_icon_149bb6740ec7e9751eeb84bc064b2afc);
+        
+    
+        var popup_130bfd00e67da036f020d24c5f92e56c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c530087808a8addeab1a0b19b8621a9 = $(`<div id="html_7c530087808a8addeab1a0b19b8621a9" style="width: 100.0%; height: 100.0%;">Destination: GuangZhou<br> Travel Time: 7h 30m<br> Trains per Day: 3<br> Cost: $110$<br> Time by Car: 15h 35min</div>`)[0];
+                popup_130bfd00e67da036f020d24c5f92e56c.setContent(html_7c530087808a8addeab1a0b19b8621a9);
+            
+        
+
+        marker_9924b88058e15d7234868f4740880a89.bindPopup(popup_130bfd00e67da036f020d24c5f92e56c)
+        ;
+
+        
+    
+    
+            marker_9924b88058e15d7234868f4740880a89.bindTooltip(
+                `<div>
+                     GuangZhou
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d8db4d83c15a3bbaa107e79f26809c4 = L.marker(
+                [27.17975, 117.36904999999999],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_db69aa12232024b67c2e25837eac28f4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e752.2 miles\u003c/div\u003e"});
+            marker_8d8db4d83c15a3bbaa107e79f26809c4.setIcon(div_icon_db69aa12232024b67c2e25837eac28f4);
+        
+    
+            var poly_line_0f33d368417da2ad1c4cbd3537334450 = L.polyline(
+                [[31.2304, 121.4737], [25.2345, 110.18]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_e9d844c1e38ca4ee9d8c8e9c441da9cc = L.marker(
+                [25.2345, 110.18],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_d58add6f147adf265b88a4e8e526b481 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eGuiLin\u003c/div\u003e"});
+            marker_e9d844c1e38ca4ee9d8c8e9c441da9cc.setIcon(div_icon_d58add6f147adf265b88a4e8e526b481);
+        
+    
+        var popup_312d209e0382b31aca5231b297032b27 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6451fe46c3850b1debe530c94f7c36a2 = $(`<div id="html_6451fe46c3850b1debe530c94f7c36a2" style="width: 100.0%; height: 100.0%;">Destination: GuiLin<br> Travel Time: 8h 30m<br> Trains per Day: 2<br> Cost: $161$<br> Time by Car: 16h 24min</div>`)[0];
+                popup_312d209e0382b31aca5231b297032b27.setContent(html_6451fe46c3850b1debe530c94f7c36a2);
+            
+        
+
+        marker_e9d844c1e38ca4ee9d8c8e9c441da9cc.bindPopup(popup_312d209e0382b31aca5231b297032b27)
+        ;
+
+        
+    
+    
+            marker_e9d844c1e38ca4ee9d8c8e9c441da9cc.bindTooltip(
+                `<div>
+                     GuiLin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_70cf455cb0eecffa30abef7d15cbc1cd = L.marker(
+                [28.23245, 115.82685000000001],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ad504a140253b4e97fedad003c11363e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e802.3 miles\u003c/div\u003e"});
+            marker_70cf455cb0eecffa30abef7d15cbc1cd.setIcon(div_icon_ad504a140253b4e97fedad003c11363e);
+        
+    
+            var poly_line_b975fb83c84680b6f0c60c5b5dc0e79b = L.polyline(
+                [[31.2304, 121.4737], [30.2936, 120.1614]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_2b7d8e0fbfca3d8697a7de07f8a7726f = L.marker(
+                [30.2936, 120.1614],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_effc2a1861235f117a635baae489d0ff = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eHangZhou\u003c/div\u003e"});
+            marker_2b7d8e0fbfca3d8697a7de07f8a7726f.setIcon(div_icon_effc2a1861235f117a635baae489d0ff);
+        
+    
+        var popup_8807f8ed1bd49190d50c9f963fc00cdf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9428fd1aacaef32fe4e3e4c2a780b576 = $(`<div id="html_9428fd1aacaef32fe4e3e4c2a780b576" style="width: 100.0%; height: 100.0%;">Destination: HangZhou<br> Travel Time: 1h<br> Trains per Day: 5<br> Cost: $10$<br> Time by Car: 2h 14min</div>`)[0];
+                popup_8807f8ed1bd49190d50c9f963fc00cdf.setContent(html_9428fd1aacaef32fe4e3e4c2a780b576);
+            
+        
+
+        marker_2b7d8e0fbfca3d8697a7de07f8a7726f.bindPopup(popup_8807f8ed1bd49190d50c9f963fc00cdf)
+        ;
+
+        
+    
+    
+            marker_2b7d8e0fbfca3d8697a7de07f8a7726f.bindTooltip(
+                `<div>
+                     HangZhou
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_72afb4e2c15e20787977a4b27a7ebdaf = L.marker(
+                [30.762, 120.81755],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_eaa73c387325af1e7c0c8ad99413f531 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e101.3 miles\u003c/div\u003e"});
+            marker_72afb4e2c15e20787977a4b27a7ebdaf.setIcon(div_icon_eaa73c387325af1e7c0c8ad99413f531);
+        
+    
+            var poly_line_44243db429d67379525812738f9d75e1 = L.polyline(
+                [[31.2304, 121.4737], [22.5429, 114.0596]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_573276a42b7e89bb1b1f00fcf63d9522 = L.marker(
+                [22.5429, 114.0596],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_bd0c3de26af7ca01e81da6f029095e1d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eShenZhen\u003c/div\u003e"});
+            marker_573276a42b7e89bb1b1f00fcf63d9522.setIcon(div_icon_bd0c3de26af7ca01e81da6f029095e1d);
+        
+    
+        var popup_2924539fc9331c8f24c937ac3b129169 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_96a4586a2188cc9362270fa9437e5acb = $(`<div id="html_96a4586a2188cc9362270fa9437e5acb" style="width: 100.0%; height: 100.0%;">Destination: ShenZhen<br> Travel Time: 12h<br> Trains per Day: 6<br> Cost: $96$<br> Time by Car: 16h 2min</div>`)[0];
+                popup_2924539fc9331c8f24c937ac3b129169.setContent(html_96a4586a2188cc9362270fa9437e5acb);
+            
+        
+
+        marker_573276a42b7e89bb1b1f00fcf63d9522.bindPopup(popup_2924539fc9331c8f24c937ac3b129169)
+        ;
+
+        
+    
+    
+            marker_573276a42b7e89bb1b1f00fcf63d9522.bindTooltip(
+                `<div>
+                     ShenZhen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1b539363ae0bab89b59795dd4af0db6a = L.marker(
+                [26.88665, 117.76665],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_d2f2a48fed0ad25dee677b803afe8336 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e752.7 miles\u003c/div\u003e"});
+            marker_1b539363ae0bab89b59795dd4af0db6a.setIcon(div_icon_d2f2a48fed0ad25dee677b803afe8336);
+        
+    
+            var poly_line_060d5e35a0981afaaaf3ac7b972685a0 = L.polyline(
+                [[31.2304, 121.4737], [30.5728, 104.0668]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_c3f23c33f3215d5d7ed5d1ff5d78eead = L.marker(
+                [30.5728, 104.0668],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ca12811d6b6b27abfa7d879de556f534 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eChengDu\u003c/div\u003e"});
+            marker_c3f23c33f3215d5d7ed5d1ff5d78eead.setIcon(div_icon_ca12811d6b6b27abfa7d879de556f534);
+        
+    
+        var popup_cd1a6220dcd6bdcecc9ab6683988657f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_02e122e99f6b00dba4ee58c41caf632c = $(`<div id="html_02e122e99f6b00dba4ee58c41caf632c" style="width: 100.0%; height: 100.0%;">Destination: ChengDu<br> Travel Time: 13h<br> Trains per Day: 2<br> Cost: $136$<br> Time by Car: 21h 9min</div>`)[0];
+                popup_cd1a6220dcd6bdcecc9ab6683988657f.setContent(html_02e122e99f6b00dba4ee58c41caf632c);
+            
+        
+
+        marker_c3f23c33f3215d5d7ed5d1ff5d78eead.bindPopup(popup_cd1a6220dcd6bdcecc9ab6683988657f)
+        ;
+
+        
+    
+    
+            marker_c3f23c33f3215d5d7ed5d1ff5d78eead.bindTooltip(
+                `<div>
+                     ChengDu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d0b3ecd92aee6bb088fc8a624680be0 = L.marker(
+                [30.901600000000002, 112.77025],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_a87dc9c2ef88e48b73fdff016a8d479f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e1034.0 miles\u003c/div\u003e"});
+            marker_3d0b3ecd92aee6bb088fc8a624680be0.setIcon(div_icon_a87dc9c2ef88e48b73fdff016a8d479f);
+        
+    
+            var poly_line_80ac7c0739c64bf5f7d6bfac90475095 = L.polyline(
+                [[31.2304, 121.4737], [32.0617, 118.7778]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_9c76d7826d5090ab651705676b69c4fe = L.marker(
+                [32.0617, 118.7778],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_d8eccedcef93d7780c733a2f3782f8ac = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eNanJing\u003c/div\u003e"});
+            marker_9c76d7826d5090ab651705676b69c4fe.setIcon(div_icon_d8eccedcef93d7780c733a2f3782f8ac);
+        
+    
+        var popup_8e5cf67c71a644555efa16313b3f2564 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e978ac945b8c01e4ad347471ab290fda = $(`<div id="html_e978ac945b8c01e4ad347471ab290fda" style="width: 100.0%; height: 100.0%;">Destination: NanJing<br> Travel Time: 1h<br> Trains per Day: 250<br> Cost: $10$<br> Time by Car: 3h 25min</div>`)[0];
+                popup_8e5cf67c71a644555efa16313b3f2564.setContent(html_e978ac945b8c01e4ad347471ab290fda);
+            
+        
+
+        marker_9c76d7826d5090ab651705676b69c4fe.bindPopup(popup_8e5cf67c71a644555efa16313b3f2564)
+        ;
+
+        
+    
+    
+            marker_9c76d7826d5090ab651705676b69c4fe.bindTooltip(
+                `<div>
+                     NanJing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb02afb995fba065b5e9602fdb3860b9 = L.marker(
+                [31.646050000000002, 120.12575],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_75a3af899a471d81729bcea10595624b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e168.9 miles\u003c/div\u003e"});
+            marker_eb02afb995fba065b5e9602fdb3860b9.setIcon(div_icon_75a3af899a471d81729bcea10595624b);
+        
+    
+            var poly_line_f7dd44451b32530eb42fbfce8688bc27 = L.polyline(
+                [[31.2304, 121.4737], [25.0406, 102.7123]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_9847d2ded4d83db3147e99d013e6b4a9 = L.marker(
+                [25.0406, 102.7123],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_14c5c13ad863f1af4d7a37310f53164e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eKunMing\u003c/div\u003e"});
+            marker_9847d2ded4d83db3147e99d013e6b4a9.setIcon(div_icon_14c5c13ad863f1af4d7a37310f53164e);
+        
+    
+        var popup_e083ae5041070e3c466e76575ea29df4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ba907225a6ab5877994e7a4456294e6 = $(`<div id="html_9ba907225a6ab5877994e7a4456294e6" style="width: 100.0%; height: 100.0%;">Destination: KunMing<br> Travel Time: 11h 30m<br> Trains per Day: 4<br> Cost: $205$<br> Time by Car: 25h</div>`)[0];
+                popup_e083ae5041070e3c466e76575ea29df4.setContent(html_9ba907225a6ab5877994e7a4456294e6);
+            
+        
+
+        marker_9847d2ded4d83db3147e99d013e6b4a9.bindPopup(popup_e083ae5041070e3c466e76575ea29df4)
+        ;
+
+        
+    
+    
+            marker_9847d2ded4d83db3147e99d013e6b4a9.bindTooltip(
+                `<div>
+                     KunMing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbaae030a103af67d8597cefc3604eb3 = L.marker(
+                [28.1355, 112.09299999999999],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_9265fea4b1cb7976599aa04bad001649 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e1219.9 miles\u003c/div\u003e"});
+            marker_cbaae030a103af67d8597cefc3604eb3.setIcon(div_icon_9265fea4b1cb7976599aa04bad001649);
+        
+    
+            var poly_line_adcb5d995b33c4f2cf66f28e349d24a9 = L.polyline(
+                [[31.2304, 121.4737], [28.2282, 112.9388]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_9aff83062f805cb5b76672e6ed5064b0 = L.marker(
+                [28.2282, 112.9388],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_fc2b65f6cb569387563745065ffa6759 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eChangSha\u003c/div\u003e"});
+            marker_9aff83062f805cb5b76672e6ed5064b0.setIcon(div_icon_fc2b65f6cb569387563745065ffa6759);
+        
+    
+        var popup_a7566db3b9ee2253b9827b7d8321060f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30c7ba3f5874d9ba367a9a201453542b = $(`<div id="html_30c7ba3f5874d9ba367a9a201453542b" style="width: 100.0%; height: 100.0%;">Destination: ChangSha<br> Travel Time: 4h 30m<br> Trains per Day: 30<br> Cost: $70$<br> Time by Car: 11h 24min</div>`)[0];
+                popup_a7566db3b9ee2253b9827b7d8321060f.setContent(html_30c7ba3f5874d9ba367a9a201453542b);
+            
+        
+
+        marker_9aff83062f805cb5b76672e6ed5064b0.bindPopup(popup_a7566db3b9ee2253b9827b7d8321060f)
+        ;
+
+        
+    
+    
+            marker_9aff83062f805cb5b76672e6ed5064b0.bindTooltip(
+                `<div>
+                     ChangSha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_31249ee7e226b7f8f3ecdcc6a84e128c = L.marker(
+                [29.729300000000002, 117.20625],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_fc2760908be598a5524a9129704f0741 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e553.0 miles\u003c/div\u003e"});
+            marker_31249ee7e226b7f8f3ecdcc6a84e128c.setIcon(div_icon_fc2760908be598a5524a9129704f0741);
+        
+    
+            var poly_line_bd1367351abf4af4a4a474394013a2d1 = L.polyline(
+                [[31.2304, 121.4737], [34.6197, 112.454]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_c75e2c9477f82cfd5b65e198b7d0c44f = L.marker(
+                [34.6197, 112.454],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_e403bacdee56ef9183949f323c949c9b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eLuoYang\u003c/div\u003e"});
+            marker_c75e2c9477f82cfd5b65e198b7d0c44f.setIcon(div_icon_e403bacdee56ef9183949f323c949c9b);
+        
+    
+        var popup_2f836cfc0f52dd4dd06304b10a3347de = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83c60fe5bdf0919d24e0200607e78a8d = $(`<div id="html_83c60fe5bdf0919d24e0200607e78a8d" style="width: 100.0%; height: 100.0%;">Destination: LuoYang<br> Travel Time: 6h <br> Trains per Day: 9<br> Cost: $86$<br> Time by Car: 10h 47min</div>`)[0];
+                popup_2f836cfc0f52dd4dd06304b10a3347de.setContent(html_83c60fe5bdf0919d24e0200607e78a8d);
+            
+        
+
+        marker_c75e2c9477f82cfd5b65e198b7d0c44f.bindPopup(popup_2f836cfc0f52dd4dd06304b10a3347de)
+        ;
+
+        
+    
+    
+            marker_c75e2c9477f82cfd5b65e198b7d0c44f.bindTooltip(
+                `<div>
+                     LuoYang
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5b24162e12e0cbe9704645f27ad2e7c = L.marker(
+                [32.92505, 116.96385],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_dc9ad04e7f1ab24126855a7d2b30ef19 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e573.6 miles\u003c/div\u003e"});
+            marker_f5b24162e12e0cbe9704645f27ad2e7c.setIcon(div_icon_dc9ad04e7f1ab24126855a7d2b30ef19);
+        
+    
+            var poly_line_47dd2f61b18e3907568340dd4db1aad3 = L.polyline(
+                [[31.2304, 121.4737], [30.5928, 114.3055]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_79772e0afa9c13425a008ceec58457ba = L.marker(
+                [30.5928, 114.3055],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_bf4d5c9811aaea6ee0c1c5da5b83d5a1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eWuHan\u003c/div\u003e"});
+            marker_79772e0afa9c13425a008ceec58457ba.setIcon(div_icon_bf4d5c9811aaea6ee0c1c5da5b83d5a1);
+        
+    
+        var popup_21639b64f6ba04008ed742c4698bc2f1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66e0cfa543dcd444255cbb3246636709 = $(`<div id="html_66e0cfa543dcd444255cbb3246636709" style="width: 100.0%; height: 100.0%;">Destination: WuHan<br> Travel Time: 5h <br> Trains per Day: 30<br> Cost: $61$<br> Time by Car: 8h 47min</div>`)[0];
+                popup_21639b64f6ba04008ed742c4698bc2f1.setContent(html_66e0cfa543dcd444255cbb3246636709);
+            
+        
+
+        marker_79772e0afa9c13425a008ceec58457ba.bindPopup(popup_21639b64f6ba04008ed742c4698bc2f1)
+        ;
+
+        
+    
+    
+            marker_79772e0afa9c13425a008ceec58457ba.bindTooltip(
+                `<div>
+                     WuHan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bebc9e1950a8e1cd3932cca66dead709 = L.marker(
+                [30.9116, 117.8896],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_c099d49a83ef6b2ed417fa230f5c0fb7 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e428.0 miles\u003c/div\u003e"});
+            marker_bebc9e1950a8e1cd3932cca66dead709.setIcon(div_icon_c099d49a83ef6b2ed417fa230f5c0fb7);
+        
+    
+            var poly_line_99a3b72350ef2c6082b26a1110bc304e = L.polyline(
+                [[31.2304, 121.4737], [22.3193, 114.1694]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_1aef31943f3f77ce899e9750f2a28b83 = L.marker(
+                [22.3193, 114.1694],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ebcae5a8b48f05e827f0de829437c935 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eHongKong\u003c/div\u003e"});
+            marker_1aef31943f3f77ce899e9750f2a28b83.setIcon(div_icon_ebcae5a8b48f05e827f0de829437c935);
+        
+    
+        var popup_0dc195585e2bab01a22865ccc3b3596d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c8a1ae5c131f0102bdd740533ecbe12 = $(`<div id="html_8c8a1ae5c131f0102bdd740533ecbe12" style="width: 100.0%; height: 100.0%;">Destination: HongKong<br> Travel Time: 8h <br> Trains per Day: 2<br> Cost: $131$<br> Time by Car: 17h 47min</div>`)[0];
+                popup_0dc195585e2bab01a22865ccc3b3596d.setContent(html_8c8a1ae5c131f0102bdd740533ecbe12);
+            
+        
+
+        marker_1aef31943f3f77ce899e9750f2a28b83.bindPopup(popup_0dc195585e2bab01a22865ccc3b3596d)
+        ;
+
+        
+    
+    
+            marker_1aef31943f3f77ce899e9750f2a28b83.bindTooltip(
+                `<div>
+                     HongKong
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28f6f8b1f968d4545d03bc384ebbb447 = L.marker(
+                [26.77485, 117.82155],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_8d9732940cc091361502540876ad2b77 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e761.2 miles\u003c/div\u003e"});
+            marker_28f6f8b1f968d4545d03bc384ebbb447.setIcon(div_icon_8d9732940cc091361502540876ad2b77);
+        
+    
+            var poly_line_bb560ee3e8ee00d11f2968fe52221856 = L.polyline(
+                [[31.2304, 121.4737], [29.8683, 121.544]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_4ecf030c7414c8deab661f2a2cc4fba9 = L.marker(
+                [29.8683, 121.544],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_ea80b44d6eb4638d225161a738929fc0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eNingBo\u003c/div\u003e"});
+            marker_4ecf030c7414c8deab661f2a2cc4fba9.setIcon(div_icon_ea80b44d6eb4638d225161a738929fc0);
+        
+    
+        var popup_bae11eccb96617854dde64e7332a8e91 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39a19438ce4fccc700dd14f5cccafa06 = $(`<div id="html_39a19438ce4fccc700dd14f5cccafa06" style="width: 100.0%; height: 100.0%;">Destination: NingBo<br> Travel Time: 2h<br> Trains per Day: 49<br> Cost: $21$<br> Time by Car: 2h 39min</div>`)[0];
+                popup_bae11eccb96617854dde64e7332a8e91.setContent(html_39a19438ce4fccc700dd14f5cccafa06);
+            
+        
+
+        marker_4ecf030c7414c8deab661f2a2cc4fba9.bindPopup(popup_bae11eccb96617854dde64e7332a8e91)
+        ;
+
+        
+    
+    
+            marker_4ecf030c7414c8deab661f2a2cc4fba9.bindTooltip(
+                `<div>
+                     NingBo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ace0976165b606dfa7f4ef35ff205068 = L.marker(
+                [30.54935, 121.50885],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_0fd33e829407032322aabdaef310325f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e93.9 miles\u003c/div\u003e"});
+            marker_ace0976165b606dfa7f4ef35ff205068.setIcon(div_icon_0fd33e829407032322aabdaef310325f);
+        
+    
+            var poly_line_c890ce52ca5f881c6eb13ee4ffedf33c = L.polyline(
+                [[31.2304, 121.4737], [29.7147, 118.3375]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var marker_ba139a775ec9037b05a0526df65d4972 = L.marker(
+                [29.7147, 118.3375],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_f31dbb608cac1e0f96b4a89cea54c14c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-family: Arial; font-size: 30px; color: green\"\u003eHuangShan\u003c/div\u003e"});
+            marker_ba139a775ec9037b05a0526df65d4972.setIcon(div_icon_f31dbb608cac1e0f96b4a89cea54c14c);
+        
+    
+        var popup_efb9ef9cb0c904781b1972b94e80e502 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c6580e9f0752af10b273577e92d67774 = $(`<div id="html_c6580e9f0752af10b273577e92d67774" style="width: 100.0%; height: 100.0%;">Destination: HuangShan<br> Travel Time: 3h <br> Trains per Day: 10<br> Cost: $30$<br> Time by Car: 4h 42min</div>`)[0];
+                popup_efb9ef9cb0c904781b1972b94e80e502.setContent(html_c6580e9f0752af10b273577e92d67774);
+            
+        
+
+        marker_ba139a775ec9037b05a0526df65d4972.bindPopup(popup_efb9ef9cb0c904781b1972b94e80e502)
+        ;
+
+        
+    
+    
+            marker_ba139a775ec9037b05a0526df65d4972.bindTooltip(
+                `<div>
+                     HuangShan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35dc5dea156e5e77d74a5d8f417ec800 = L.marker(
+                [30.47255, 119.90559999999999],
+                {}
+            ).addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+    
+            var div_icon_2d88ca50956c7ff81aba852882e8ca5c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20px; color: black;\"\u003e214.3 miles\u003c/div\u003e"});
+            marker_35dc5dea156e5e77d74a5d8f417ec800.setIcon(div_icon_2d88ca50956c7ff81aba852882e8ca5c);
+        
+    
+            tile_layer_8bf1d9c242c40e9548942fe40d6e3a75.addTo(map_8bdfcfab9a500f1a56867092dd2e760d);
+        
+</script>
+</html>
